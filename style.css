@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    background: #737373;
+    color: black;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 11fr;
+    grid-template-areas: 
+        "m h"
+        "m i"
+        "m s"
+        "m d"
+        "m b";  
+}
+
+.main_container {
+    grid-area: m;
+}
+
+.main_container .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    padding: 1em;
+    height: 100vh;
+}
+
+.navbar h1 {
+    margin-bottom: 1em;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.headings {
+    grid-area: h;
+    text-align: center;
+    padding: 1em;
+    background: #f4f4f4;
+}
+
+.image_container {
+    grid-area: i;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    background: #fff;
+}
+
+.image_container div {
+    overflow: hidden;
+}
+
+.image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services {
+    grid-area: s;
+    padding: 2em;
+    background: #f4f4f4;
+}
+
+.designers {
+    grid-area: d;
+    padding: 2em;
+    background: #fff;
+}
+
+.booking_package {
+    grid-area: b;
+    padding: 2em;
+    background: #f4f4f4;
+}
+
+.packages, .contact {
+    margin-bottom: 2em;
+}
+
+.packages .package, .contact form {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+}
+
+.packages .package h3, .packages .package p {
+    margin: 0.5em 0;
+}
+
+.packages .package .room-info, .packages .package .amount {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.packages .package button {
+    padding: 0.5em 1em;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.contact form input, .contact form textarea, .contact form button {
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
